@@ -7,7 +7,7 @@ import static spark.Spark.*;
 
 public class SparkAPI {
     public static void main(String[] args) {
-        getPort();
+        port(getPort());
         get("/calculator",(req,res)-> {
             String values = req.queryParams("numbers");
             String[] valuesInStringArray = values.split(",");
